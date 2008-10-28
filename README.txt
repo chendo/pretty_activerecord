@@ -31,7 +31,7 @@ Sample output:
 
 == INSTALL:
 
-* sudo gem install chendo-pretty_activerecord --source gems.github.com
+* sudo gem install chendo-pretty_activerecord --source http://gems.github.com
 
 == LICENSE:
 
