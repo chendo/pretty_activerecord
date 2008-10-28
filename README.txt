@@ -27,11 +27,17 @@ Sample output:
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* TODO - how to make it work with Rails
 
 == INSTALL:
 
 * sudo gem install chendo-pretty_activerecord --source http://gems.github.com
+
+In your Rails app, add the following to your config/environment.rb:
+
+		config.gem 'chendo-pretty_activerecord', :source => 'http://gems.github.com'
+
+
 
 == LICENSE:
 

@@ -6,12 +6,15 @@ module PrettyActiveRecord
   
   def inspect
     longest = self.class.column_names.map { |e| e.length }.max
-    attributes_as_nice_string = self.class.column_names.collect { |name|
-            if has_attribute?(name)
-              "\t#{short_column_type(name).ljust(10)} #{name.ljust(longest)}: #{attribute_for_inspect(name)}"
-            end
-          }.compact.join("\n")
-          "#{self.class}:\n#{attributes_as_nice_string}\n"
+    attributes_as_nice_string = self.class.column_names.collect do |name|
+      if has_attribute?(name)
+        "\t#{short_column_type(name).ljust(10)} #{name.ljust(longest)}: #{attribute_for_inspect(name)}"
+      end
+    end.compact.join("\n")
+    <<-OUT.gsub(/^    /,'')
+    #{self.class}:
+    #{attributes_as_nice_string}
+    OUT
   end
   
   def short_column_type(column)
