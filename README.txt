@@ -1,18 +1,29 @@
 = pretty_activerecord
 
-* FIX (url)
+* http://github.com/chendo/pretty_activerecord
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Makes printing ActiveRecord objects pretty (via #inspect method).
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* #inspect method displays an ActiveRecord instance over multiple lines making it easier to read.
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+Sample output:
+
+		Person:
+    	int(4)     id           : nil
+    	str(255)   first_name   : "Jack"
+    	str(255)   last_name    : "Chen"
+    	text       bio          : "I work at Mocra"
+    	int        age          : 19
+    	decimal(8) height       : 169.4
+    	datetime   date_of_birth: "1988-10-29 00:00:00"
+    	boolean    human        : true
+
 
 == REQUIREMENTS:
 
@@ -20,13 +31,13 @@ FIX (describe your package)
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* sudo gem install chendo-pretty_activerecord --source gems.github.com
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2008 FIXME full name
+Copyright (c) 2008 Jack Chen, Mocra
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
