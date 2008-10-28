@@ -2,7 +2,7 @@ $:.unshift(File.dirname(__FILE__)) unless
   $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
 
 module PrettyActiveRecord
-  VERSION = '0.0.1'
+  VERSION = '1.0.0'
   
   def inspect
     longest = self.class.column_names.map { |e| e.length }.max
