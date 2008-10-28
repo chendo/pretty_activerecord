@@ -1,0 +1,7 @@
+require 'test/unit'
+require File.dirname(__FILE__) + '/../lib/pretty_activerecord'
+require 'rubygems'
+gem 'Shoulda'
+require 'Shoulda'
+gem 'mocha'
+require 'mocha'
